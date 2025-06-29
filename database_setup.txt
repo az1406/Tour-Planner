@@ -1,0 +1,44 @@
+----------------------------------------------------------------------------------
+Create table and insert data 
+----------------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS "Tours" (
+    "Id" SERIAL PRIMARY KEY,
+    "Name" VARCHAR(255),
+    "Description" TEXT,
+    "ImagePath" VARCHAR(255),
+    "From" VARCHAR(255),
+    "To" VARCHAR(255),
+    "TransportType" VARCHAR(100),
+    "TourDistance" DOUBLE PRECISION,
+    "EstimatedTime" INTERVAL,
+    "RouteInformation" TEXT
+);
+
+CREATE TABLE "TourLogs" (
+    "Id" SERIAL PRIMARY KEY,
+    "Comment" TEXT,
+    "Date" TIMESTAMP WITH TIME ZONE NOT NULL,
+    "Difficulty" DOUBLE PRECISION,
+    "Rating" DOUBLE PRECISION,
+    "TotalDistance" DOUBLE PRECISION,
+    "TotalTime" INTERVAL,
+    "TourId" INT NOT NULL,
+    FOREIGN KEY ("TourId") REFERENCES "Tours" ("Id")
+);
+----------------------------------------------------------------------------------
+Other commands
+----------------------------------------------------------------------------------
+
+SELECT * FROM "Tours";
+
+TRUNCATE TABLE "Tours";
+
+DROP TABLE "Tours";
+
+SELECT * FROM "TourLogs";
+
+TRUNCATE TABLE "TourLogs";
+
+DROP TABLE "TourLogs";
+

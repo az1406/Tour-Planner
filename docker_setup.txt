@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------
+If running docker:
+----------------------------------------------------------------------------------
+
+docker run --name tourplanner-db -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres -e POSTGRES_DB=tourplanner -p 5432:5432 -d postgres
+
+docker exec -it tourplanner-db psql -U postgres -d tourplanner
+
+
+
+----------------------------------------------------------------------------------
+If setting up manually in pgAdmin4
+----------------------------------------------------------------------------------
+
+Host=localhost;
+Port=5432;
+Database=tourplanner;
+Username=postgres;
+Password=password

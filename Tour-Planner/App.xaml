@@ -1,0 +1,12 @@
+﻿<Application x:Class="Tour_Planner.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:converters="clr-namespace:Tour_Planner.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:StringToVisibilityConverter x:Key="StringToVisibilityConverter" />
+            <converters:RelativeToAbsolutePathConverter x:Key="RelativeToAbsolutePathConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,15 @@
+<UserControl x:Class="Tour_Planner.Views.SearchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="5" HorizontalAlignment="Left">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBox Height="20" Width="200" MinWidth="200"
+                 HorizontalAlignment="Stretch" Margin="1"
+                 Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                 Grid.Column="0" />
+        <Button Content="🔍" Width="40" Height="20" Command="{Binding SearchCommand}" Grid.Column="1" />
+    </Grid>
+</UserControl>

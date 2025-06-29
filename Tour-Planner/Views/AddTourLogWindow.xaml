@@ -1,0 +1,43 @@
+<Window x:Class="Tour_Planner.Views.AddTourLogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Tour Log" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Date:" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="5" />
+        <DatePicker x:Name="LogDatePicker" Grid.Row="0" Grid.Column="1" Margin="5" />
+
+        <TextBlock Text="Comment:" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="CommentTextBox" Grid.Row="1" Grid.Column="1" Margin="5" />
+
+        <TextBlock Text="Difficulty(1-10):" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="DifficultyTextBox" Grid.Row="2" Grid.Column="1" Margin="5" />
+
+        <TextBlock Text="Total Distance(in km):" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="TotalDistanceTextBox" Grid.Row="3" Grid.Column="1" Margin="5" />
+
+        <TextBlock Text="Total Time(hh:mm:ss):" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="TotalTimeTextBox" Grid.Row="4" Grid.Column="1" Margin="5" />
+
+        <TextBlock Text="Rating(1-10):" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Margin="5" />
+        <TextBox x:Name="RatingTextBox" Grid.Row="5" Grid.Column="1" Margin="5" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Add" Width="75" Margin="5" Click="AddButton_Click" />
+            <Button Content="Cancel" Width="75" Margin="5" Click="CancelButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>
